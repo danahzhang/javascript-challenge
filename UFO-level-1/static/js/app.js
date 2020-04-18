@@ -9,7 +9,6 @@ tableData.forEach((data) => {
     cell.text(value);
 });
 });
-// YOUR CODE HERE!
 //Button
 var button = d3.select("#filter-btn");
 
@@ -21,11 +20,9 @@ button.on("click", function() {
   var inputElement = d3.select("#datetime");
   // Get the value property of the input element
   var inputValue = inputElement.property("value");
-  console.log(inputValue);
 
   //Filtered Data
   var filteredData = tableData.filter(data => data.datetime === inputValue);
-
 
   //Add Filtered Table
   filteredData.forEach((data) => {
@@ -36,3 +33,4 @@ button.on("click", function() {
       });
   });
 });
+
